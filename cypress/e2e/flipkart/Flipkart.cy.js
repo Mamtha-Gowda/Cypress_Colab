@@ -1,3 +1,4 @@
+/// <reference types="Cypress"/>
 import { FlipkartHomePage } from "./pages/FlipkartHomePage";
 
 beforeEach(() => {
