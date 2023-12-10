@@ -6,6 +6,7 @@ beforeEach(()=>{
 
     cy.clearCookies();
     cy.clearLocalStorage();
+    cy.visit("https://www.amazon.com/");
 
 })
 
@@ -13,8 +14,12 @@ describe('Amazon Test Suit', ()=>{
 
 it('Amazon Login', ()=>{
 
-    cy.visit("https://www.amazon.com/");
+    
     AmazonHomePage.element.Amazonlogo().should('be.visible');
+   
+});
+
+it('choose a phone', ()=>{
     AmazonHomePage.element.searchbox().type('mobile');
     cy.wait(2000);
     AmazonHomePage.element.suggessions().click();
@@ -23,5 +28,6 @@ it('Amazon Login', ()=>{
     MobilePhonePage.element.mobile().click();
 
 })
+
 
 })
