@@ -1,6 +1,6 @@
 
-import { Homepage } from "./Homepage";
-import { RegistrationPage } from "./RegistrationPage";
+import { Homepage } from "./Pages/Homepage";
+import { RegistrationPage } from "./Pages/RegistrationPage";
 
 // beforeEach(()=>{
 //     cy.clearCookies();
@@ -12,16 +12,14 @@ describe('First Test suite', ()=>{
        it('Register user', ()=>{
         cy.visit("/");
         Homepage.elements.homepage_logo().should('be.visible');
-        Homepage.elements.btn_signup().should('be.visible');
         Homepage.elements.btn_signup().click();
         RegistrationPage.elements.txt_name().should('be.visible');
         cy.Generate_Username();
-        //RegistrationPage.elements.txt_name().type(uname);
         RegistrationPage.elements.txt_email_address().type("arereeeer@gmail.com");
         RegistrationPage.elements.btn_submit().click();
         RegistrationPage.elements.header_register().should('be.visible');
         RegistrationPage.elements.r_button_mr().should('be.visible');
-        RegistrationPage.elements.r_button_mr().click();
+        RegistrationPage.elements.r_button_mr().click();//combine
         RegistrationPage.elements.txt_pwd().type("random@2023");
         RegistrationPage.elements.txt_firstname().type("random");
         RegistrationPage.elements.txt_lastname().type("name");
