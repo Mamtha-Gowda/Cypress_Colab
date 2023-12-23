@@ -31,7 +31,6 @@ describe('First Test suite', ()=>{
         RegistrationPage.elements.btn_createaccount().click();
         RegistrationPage.elements.txt_account_created().should('have.text','Account Created!');
         RegistrationPage.elements.btn_continue().click();
-
     })
 
 })
