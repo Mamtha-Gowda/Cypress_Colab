@@ -13,9 +13,18 @@
 // Cypress.Commands.add('login', (email, password) => { ... })
 import { RegistrationPage } from '../e2e/AutomationPractice/Pages/RegistrationPage'
 
-Cypress.Commands.add('Generate_Username', () => {
-   let username = generateString(8);
+var username;
+Cypress.Commands.add('Generate_Username', () => { 
+   username = generateString(8);
+   let email =username+"@gmail.com"
    RegistrationPage.elements.txt_name().type(username);
+   RegistrationPage.elements.txt_email_address().type(email);
+   
+})
+
+Cypress.Commands.add('VerifyUSerName', ()=>{
+
+
 })
 
 // program to generate random strings
@@ -32,6 +41,8 @@ function generateString(length) {
 
    return result;
 }
+
+
 //
 //
 // -- This is a child command --
