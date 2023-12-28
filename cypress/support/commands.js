@@ -12,19 +12,28 @@
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
 import { RegistrationPage } from '../e2e/AutomationPractice/Pages/RegistrationPage'
+import { Homepage } from '../e2e/AutomationPractice/Pages/Homepage';
+import testdata from '../fixtures/AutomationPractice.json'
 
 var username;
+let email;
 Cypress.Commands.add('Generate_Username', () => { 
    username = generateString(8);
-   let email =username+"@gmail.com"
+   email =username+"@gmail.com"
    RegistrationPage.elements.txt_name().type(username);
    RegistrationPage.elements.txt_email_address().type(email);
    
 })
 
 Cypress.Commands.add('VerifyUSerName', ()=>{
+   Homepage.elements.LoggedInUserName().should('have.text',username);
 
+})
 
+Cypress.Commands.add('LoginToYourAccount', ()=>{
+RegistrationPage.elements.Username().type(email);
+RegistrationPage.elements.Password().type(testdata.Password);
+RegistrationPage.elements.LoginButton().click();
 })
 
 // program to generate random strings

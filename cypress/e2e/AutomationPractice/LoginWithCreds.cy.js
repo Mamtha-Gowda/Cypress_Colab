@@ -33,20 +33,14 @@ describe('First Test suite', () => {
         RegistrationPage.elements.btn_createaccount().click();
         RegistrationPage.elements.txt_account_created().should('have.text', 'Account Created!');
         RegistrationPage.elements.btn_continue().click();
-        cy.VerifyUSerName();
-        Homepage.elements.DeleteAccount().click();
-        Homepage.elements.TxtAccountDeleted().should('have.text', 'Account Deleted!');
-    })
-
-    it("Login with correct creds", () => {
-        cy.visit("/");
-        Homepage.elements.homepage_logo().should('be.visible');
+        Homepage.elements.LogOut().click();
         Homepage.elements.btn_signup().click();
         RegistrationPage.elements.txt_login_to_account().should('have.text', 'Login to your account');
         cy.LoginToYourAccount();
         cy.VerifyUSerName();
         Homepage.elements.DeleteAccount().click();
         Homepage.elements.TxtAccountDeleted().should('have.text', 'Account Deleted!');
+        
     })
 
 })
