@@ -9,9 +9,6 @@ before(() => {
     })
 })
 
-
-
-
 describe('First Test suite', () => {
     it('Register user', () => {
         cy.visit("/");
@@ -40,7 +37,5 @@ describe('First Test suite', () => {
         cy.VerifyUSerName();
         Homepage.elements.DeleteAccount().click();
         Homepage.elements.TxtAccountDeleted().should('have.text', 'Account Deleted!');
-        
     })
-
 })

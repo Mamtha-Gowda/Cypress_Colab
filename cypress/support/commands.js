@@ -21,13 +21,11 @@ Cypress.Commands.add('Generate_Username', () => {
    username = generateString(8);
    email =username+"@gmail.com"
    RegistrationPage.elements.txt_name().type(username);
-   RegistrationPage.elements.txt_email_address().type(email);
-   
+   RegistrationPage.elements.txt_email_address().type(email);   
 })
 
 Cypress.Commands.add('VerifyUSerName', ()=>{
    Homepage.elements.LoggedInUserName().should('have.text',username);
-
 })
 
 Cypress.Commands.add('LoginToYourAccount', ()=>{
@@ -47,8 +45,7 @@ function generateString(length) {
    for (let i = 0; i < length; i++) {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
    }
-
-   return result;
+return result;
 }
 
 
