@@ -5,7 +5,8 @@ export const Homepage = {
         btn_signup: () => cy.get('a[href="/login"]'),
         LoggedInUserName: () => cy.get('a b'),
         DeleteAccount: () => cy.get('a[href="/delete_account"]'),
-        TxtAccountDeleted: () => cy.get('h2 b')
+        TxtAccountDeleted: () => cy.get('h2 b'),
+        LogOut: () => cy.get('.shop-menu > .nav > :nth-child(4) > a')
     }
 
 
