@@ -20,6 +20,7 @@ export const RegistrationPage = {
         txt_login_to_account: () => cy.get('.login-form h2'),
         Username: () => cy.get('input[placeholder="Email Address"]:nth-of-type(2)'),
         Password: () => cy.get('input[type="password"]'),
-        LoginButton: () => cy.get('.btn.btn-default:contains("Login")')
+        LoginButton: () => cy.get('.btn.btn-default:contains("Login")'),
+        errorText: () => cy.get('.login-form >form >p')
     }
 }

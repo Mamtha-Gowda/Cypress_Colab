@@ -11,9 +11,9 @@
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
-import { RegistrationPage } from '../e2e/AutomationPractice/Pages/RegistrationPage'
+import { RegistrationPage } from '../e2e/AutomationPractice/Pages/RegistrationPage';
 import { Homepage } from '../e2e/AutomationPractice/Pages/Homepage';
-import testdata from '../fixtures/AutomationPractice.json'
+import testdata from '../fixtures/AutomationPractice.json';
 
 var username;
 let email;
@@ -33,6 +33,12 @@ RegistrationPage.elements.Username().type(email);
 RegistrationPage.elements.Password().type(testdata.Password);
 RegistrationPage.elements.LoginButton().click();
 })
+
+Cypress.Commands.add('LoginWithWrongCreds', ()=>{
+   RegistrationPage.elements.Username().type(testdata.emailid);
+   RegistrationPage.elements.Password().type(testdata.incorrectPwd);
+   RegistrationPage.elements.LoginButton().click();
+   })
 
 // program to generate random strings
 

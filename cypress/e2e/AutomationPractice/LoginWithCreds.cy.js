@@ -10,7 +10,7 @@ before(() => {
 })
 
 describe('First Test suite', () => {
-    it('Register user', () => {
+    it('Register user and login with correct creds', () => {
         cy.visit("/");
         Homepage.elements.homepage_logo().should('be.visible');
         Homepage.elements.btn_signup().click();
