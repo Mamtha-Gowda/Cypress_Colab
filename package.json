@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "cypress": "^13.6.0"
+  },
+  "scripts": {
+      "cypress-Dashboard-Run" : "npx cypress run --record --key eb65929a-bac3-49f7-ba94-b37825d7b3f2"
   }
 }

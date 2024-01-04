@@ -8,6 +8,4 @@ export const Homepage = {
         TxtAccountDeleted: () => cy.get('h2 b'),
         LogOut: () => cy.get('.shop-menu > .nav > :nth-child(4) > a')
     }
-
-
 }
