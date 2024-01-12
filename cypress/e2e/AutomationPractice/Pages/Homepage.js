@@ -6,6 +6,8 @@ export const Homepage = {
         LoggedInUserName: () => cy.get('a b'),
         DeleteAccount: () => cy.get('a[href="/delete_account"]'),
         TxtAccountDeleted: () => cy.get('h2 b'),
-        LogOut: () => cy.get('.shop-menu > .nav > :nth-child(4) > a')
+        LogOut: () => cy.get('.shop-menu > .nav > :nth-child(4) > a'),
+        ContactUs: () => cy.get('a[href="/contact_us"]'),
+        Pruducts: () => cy.get('a[href="/products"]')
     }
 }
