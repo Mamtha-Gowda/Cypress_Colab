@@ -1,5 +1,5 @@
-import { Homepage } from "./Pages/Homepage";
-import { RegistrationPage } from "./Pages/RegistrationPage";
+import { Homepage } from "../Pages/Homepage";
+import { RegistrationPage } from "../Pages/RegistrationPage";
 
 describe("First Test Suite", ()=>{
    it("Login with incorrect Creds", ()=>{

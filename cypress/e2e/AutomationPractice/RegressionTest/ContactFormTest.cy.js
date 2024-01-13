@@ -1,13 +1,11 @@
-import { Homepage } from "./Pages/Homepage";
-import { ContactUsPage } from "./Pages/ContactUsPage"
-import { ProductPage } from "./Pages/ProductPage";
+import { Homepage } from "../Pages/Homepage";
+import { ContactUsPage } from "../Pages/ContactUsPage"
+import { ProductPage } from "../Pages/ProductPage";
 
 let userdata;
 before(() => {
     cy.fixture("AutomationPractice").then((data) => {
-
         userdata = data;
-
     })
 
 })

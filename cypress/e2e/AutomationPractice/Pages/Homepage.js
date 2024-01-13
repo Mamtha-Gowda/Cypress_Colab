@@ -8,6 +8,10 @@ export const Homepage = {
         TxtAccountDeleted: () => cy.get('h2 b'),
         LogOut: () => cy.get('.shop-menu > .nav > :nth-child(4) > a'),
         ContactUs: () => cy.get('a[href="/contact_us"]'),
-        Pruducts: () => cy.get('a[href="/products"]')
+        Pruducts: () => cy.get('a[href="/products"]'),
+        Subscription: () => cy.get('h2:contains("Subscription")'),
+        EmailAddress: () => cy.get('#susbscribe_email'),
+        Submit: () => cy.get('#subscribe'),
+        SubscribedMessage: () => cy.get('.alert-success')
     }
 }
