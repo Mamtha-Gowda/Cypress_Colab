@@ -12,6 +12,7 @@ export const Homepage = {
         Subscription: () => cy.get('h2:contains("Subscription")'),
         EmailAddress: () => cy.get('#susbscribe_email'),
         Submit: () => cy.get('#subscribe'),
-        SubscribedMessage: () => cy.get('.alert-success')
+        SubscribedMessage: () => cy.get('.alert-success'),
+        products: () => cy.get('a[href="/products"]'),
     }
 }

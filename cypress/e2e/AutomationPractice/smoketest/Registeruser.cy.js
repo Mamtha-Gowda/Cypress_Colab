@@ -1,6 +1,5 @@
-
-import { Homepage } from "./Pages/Homepage";
-import { RegistrationPage } from "./Pages/RegistrationPage";
+import { Homepage } from "../Pages/Homepage";
+import { RegistrationPage } from "../Pages/RegistrationPage";
 
 let userdata;
 before(() => {
