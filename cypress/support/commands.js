@@ -17,28 +17,39 @@ import testdata from '../fixtures/AutomationPractice.json';
 
 var username;
 let email;
-Cypress.Commands.add('Generate_Username', () => { 
+Cypress.Commands.add('Generate_Username', () => {
    username = generateString(8);
-   email =username+"@gmail.com"
+   email = username + "@gmail.com"
    RegistrationPage.elements.txt_name().type(username);
-   RegistrationPage.elements.txt_email_address().type(email);   
+   RegistrationPage.elements.txt_email_address().type(email);
 })
 
-Cypress.Commands.add('VerifyUSerName', ()=>{
-   Homepage.elements.LoggedInUserName().should('have.text',username);
+Cypress.Commands.add('VerifyUSerName', () => {
+   Homepage.elements.LoggedInUserName().should('have.text', username);
 })
 
-Cypress.Commands.add('LoginToYourAccount', ()=>{
-RegistrationPage.elements.Username().type(email);
-RegistrationPage.elements.Password().type(testdata.Password);
-RegistrationPage.elements.LoginButton().click();
+Cypress.Commands.add('LoginToYourAccount', () => {
+   RegistrationPage.elements.Username().type(email);
+   RegistrationPage.elements.Password().type(testdata.Password);
+   RegistrationPage.elements.LoginButton().click();
 })
 
-Cypress.Commands.add('LoginWithWrongCreds', ()=>{
+Cypress.Commands.add('LoginWithWrongCreds', () => {
    RegistrationPage.elements.Username().type(testdata.emailid);
    RegistrationPage.elements.Password().type(testdata.incorrectPwd);
    RegistrationPage.elements.LoginButton().click();
+})
+
+Cypress.Commands.add('Loginwithsession', () => {
+   cy.session('login', () => {
+      cy.visit("./");
+      Homepage.elements.btn_signup().click();
+      RegistrationPage.elements.txt_login_to_account().should('have.text', 'Login to your account');
+      RegistrationPage.elements.Username().type("DX7976ME@gmail.com");
+      RegistrationPage.elements.Password().type("random@2023");
+      RegistrationPage.elements.LoginButton().click();
    })
+})
 
 // program to generate random strings
 
@@ -51,7 +62,7 @@ function generateString(length) {
    for (let i = 0; i < length; i++) {
       result += characters.charAt(Math.floor(Math.random() * charactersLength));
    }
-return result;
+   return result;
 }
 
 

@@ -5,6 +5,9 @@ export const ProductDetails = {
         productprice: () => cy.get('span:contains("Rs.")'),
         productavailability: () => cy.contains("Availability:"),
         productcondition: () => cy.get('b:contains("Condition:")'),
-        productbrand: () => cy.get('b:contains("Brand:")')
+        productbrand: () => cy.get('b:contains("Brand:")'),
+        addtocart: () => cy.get('.btn.btn-default.cart'),
+        quantitybox: () => cy.get('#quantity'),
+        viewcart: () => cy.get('p a[href="/view_cart"]')
     }
 }
