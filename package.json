@@ -3,7 +3,10 @@
     "cypress": "^13.6.0"
   },
   "scripts": {
-      "cypress-Dashboard-Run" : "npx cypress run --record --key eb65929a-bac3-49f7-ba94-b37825d7b3f2",
-      "smoke-test" : "npx cypress run -- browser chrome --spec C:\\Users\\mamat\\Cypress_Colab\\cypress\\e2e\\AutomationPractice\\smoketest\\*cy.js"
+    "cypress-Dashboard-Run": "npx cypress run --record --key eb65929a-bac3-49f7-ba94-b37825d7b3f2",
+    "smoke-test": "npx cypress run --spec cypress\\e2e\\AutomationPractice\\smoketest"
+  },
+  "devDependencies": {
+    "playwright-webkit": "1.34"
   }
 }

@@ -2,6 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   projectId: "3euwpr",
+  retries: {openMode:1, runMode:1},
   e2e: {
     baseUrl : 'https://automationexercise.com/',
     testIsolation: false,
@@ -9,4 +10,5 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
+  experimentalWebKitSupport: true
 });
