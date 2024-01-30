@@ -49,7 +49,5 @@ describe("Test suite", () => {
         PaymentPage.elements.btnconfirmorder().click();
         PaymentPage.elements.confiramtion().should('be.visible');
         PaymentPage.elements.confiramtion().should('have.text', "Congratulations! Your order has been confirmed!");
-
-
     })
 })
