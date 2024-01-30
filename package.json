@@ -1,12 +1,14 @@
 {
   "dependencies": {
-    "cypress": "^13.6.0"
+    "cypress": "^13.6.3",
+    "xpath": "^0.0.34"
   },
   "scripts": {
     "cypress-Dashboard-Run": "npx cypress run --record --key eb65929a-bac3-49f7-ba94-b37825d7b3f2",
     "smoke-test": "npx cypress run --spec cypress\\e2e\\AutomationPractice\\smoketest"
   },
   "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
     "playwright-webkit": "1.34"
   }
 }
