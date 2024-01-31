@@ -16,7 +16,7 @@ describe("Assertions", ()=>{
         cy.visit("https://example.cypress.io/");
         //cy.screenshot();
         //cy.screenshot("test1.png");
-        cy.get('#utilities').should('be.visible');
+        cy.get('#utilities').should('not.be.visible');
         cy.xpath('(//div[@id="utilities"])[1]').should('be.visible');
     })
 })
