@@ -65,6 +65,20 @@ function generateString(length) {
    return result;
 }
 
+Cypress.Commands.add('verify_country', (country_code) => {
+
+   switch (country_code) {
+      case '/in/':
+         return 'India'
+      case '/ca/':
+         return 'Canada'
+      case '/ae/':
+         return 'dubai'
+      default:
+         return 'United States'
+   }
+})
+
 
 //
 //
