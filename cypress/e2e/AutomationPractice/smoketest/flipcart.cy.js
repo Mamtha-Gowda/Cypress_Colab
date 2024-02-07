@@ -14,9 +14,9 @@ describe("flip cart test" , ()=>{
              cy.log(index);
              cy.log($list)
 
-            //  if(price>30000){
-            //     cy.log()
-            //  }
+             if(price>30000){
+                cy.log()
+             }
 
         })
     })
