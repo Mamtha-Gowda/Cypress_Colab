@@ -17,6 +17,7 @@ describe("flip cart test" , ()=>{
              if(price>30000){
                 cy.log();
                 cy.log();
+                cy.get("");
              }
 
         })
